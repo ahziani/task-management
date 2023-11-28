@@ -1,0 +1,27 @@
+mat-card-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.task-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eee;
+    padding: 20px 0;
+
+    form {
+        padding: 10px 0;
+        max-width: 560px;
+    }
+}
+  
+mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.mb-20 {
+    margin-bottom: 30px;
+}

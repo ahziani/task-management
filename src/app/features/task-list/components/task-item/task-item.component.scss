@@ -1,0 +1,82 @@
+.task-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: all 0.5;
+}
+
+.task-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    cursor: pointer;
+
+    .task-card-actions {
+        opacity: 1;
+    }
+}
+
+.task-item-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.task-item-content {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.date {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.priority-high {
+    color: #d32f2f;
+}
+
+.priority-medium {
+    color: #fbc02d;
+}
+
+.priority-low {
+    color: #388e3c;
+}
+
+.task-item-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.task-card-title {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.task-card-actions {
+    opacity: 0;
+    display: flex;
+    justify-content: flex-end;   
+    position: absolute; 
+    right: 0;
+    bottom: 0;
+    transition: all 0.5;
+
+    .mdc-button {
+        min-width: 40px;
+    }
+
+    .mat-mdc-button>.mat-icon {
+        margin-right: 0;
+    }
+
+}
+
+.mat-mdc-card-content {
+    padding: 20px 16px 20px;
+}
