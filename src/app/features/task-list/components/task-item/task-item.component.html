@@ -1,3 +1,16 @@
-<div class="task-item">
-    task item
-</div>
+<mat-card class="task-item">
+    <mat-card-content>
+        <div class="task-item-title">Title</div>
+        <div class="task-item-content">Description</div>
+        <div class="date">Date</div>
+        <div class="priority-high">Priority</div>
+    </mat-card-content>
+    <div class="task-item-actions">
+        <a mat-button>
+            <mat-icon>edit</mat-icon>
+        </a>
+        <button mat-button>
+            <mat-icon color="warn">delete</mat-icon>
+        </button>
+    </div>
+</mat-card>
