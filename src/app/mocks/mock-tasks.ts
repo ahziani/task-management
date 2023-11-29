@@ -25,7 +25,7 @@ export const TASKS:Task [] = [
         "description": "Create complex forms using Angular Reactive Forms, including nested form groups and dynamic form controls based on user input.",
         "date": "2023-12-20T00:00:00.000Z",
         "priority": "medium",
-        "completed": false,
+        "completed": true,
         "log": 4
     },
     {

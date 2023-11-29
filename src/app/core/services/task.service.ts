@@ -6,11 +6,18 @@ import { Task } from '../models/task';
   providedIn: 'root'
 })
 export class TaskService {
-  task: Task[]= TASKS;
+  tasks: Task[]= TASKS;
 
   getTasks() {
-    return this.task;
+    return this.tasks;
   }
 
-  
+  getCompletedTask(): Task[] {
+    return  this.tasks.filter(task => task.completed)
+  }
+
+  getInprogressTask(): Task[] {
+    return this.tasks.filter(task => !task.completed)
+  }
+
 }

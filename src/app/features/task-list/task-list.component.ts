@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Task } from 'src/app/core/models/task';
 import { TaskService } from 'src/app/core/services/task.service';
 
 @Component({
@@ -7,9 +8,11 @@ import { TaskService } from 'src/app/core/services/task.service';
   styleUrls: ['./task-list.component.scss'],
 })
 export class TaskListComponent {
-  tasksList: any;
+  listCompletedTask: Task[];
+  listInprogressTask: Task[];
 
   constructor(private tasks: TaskService) {
-    this.tasksList = this.tasks.getTasks();
+    this.listCompletedTask = this.tasks.getCompletedTask();
+    this.listInprogressTask = this.tasks.getInprogressTask();
   }
 }

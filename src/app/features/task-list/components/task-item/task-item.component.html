@@ -6,7 +6,7 @@
         <div class="priority-high">Priority : {{ task.priority }}</div>
     </mat-card-content>
     <div class="task-item-actions">
-        <a mat-button>
+        <a mat-button [routerLink]="['/edit', task.id]">
             <mat-icon>edit</mat-icon>
         </a>
         <button mat-button>
