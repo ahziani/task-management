@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { dateFromTodayValidator } from 'src/app/shared/validators/date-validators';
+import { numberValidator } from 'src/app/shared/validators/number-validators';
 
 @Component({
   selector: 'app-task-form',
@@ -14,7 +15,7 @@ export class TaskFormComponent {
     this.taskForm = this.fb.group({
       title: ['', [Validators.required]],
       description: ['', Validators.required],
-      log: [0],
+      log: [0, [Validators.required, numberValidator()]],
       deadline: ['', [Validators.required, dateFromTodayValidator()]], 
       priority: [''], 
       complated: [false], 
@@ -22,7 +23,6 @@ export class TaskFormComponent {
   }
 
   onSubmit() {
-    console.log('deadline', this.taskForm.get('deadline')?.errors)
+    
   }
-
 }
