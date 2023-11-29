@@ -21,7 +21,8 @@ export class TaskFormComponent {
   }
 
   onSubmit() {
-    console.log('onSubmit')
+
+    console.log('onSubmit ')
   }
 
 }

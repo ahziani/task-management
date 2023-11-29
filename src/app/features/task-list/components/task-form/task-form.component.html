@@ -19,7 +19,7 @@
             
             <mat-form-field appearance="fill">
                 <mat-label>Time spent</mat-label>
-                <input matInput formControlName="log">
+                <input appReplaceComma matInput formControlName="log">
             </mat-form-field>
 
             <mat-form-field>
@@ -41,7 +41,7 @@
             <div class="mb-20">
                 <mat-slide-toggle formControlName="complated">Task in progress</mat-slide-toggle>
             </div>
-            <button mat-raised-button color="primary" type="submit" [disabled]="!taskForm.valid">Save task</button>
+            <button mat-raised-button color="primary" type="submit" [disabled]="">Save task</button>
         </form>
     </mat-card>
 </div>
