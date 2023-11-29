@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Task } from 'src/app/core/models/task';
 
 @Component({
   selector: 'app-task-item',
@@ -6,5 +7,5 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./task-item.component.scss'],
 })
 export class TaskItemComponent {
-  
+  @Input() task: Task;
 }

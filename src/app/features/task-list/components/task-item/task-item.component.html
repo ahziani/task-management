@@ -1,9 +1,9 @@
 <mat-card class="task-item">
     <mat-card-content>
-        <div class="task-item-title">Title</div>
-        <div class="task-item-content">Description</div>
-        <div class="date">Date</div>
-        <div class="priority-high">Priority</div>
+        <div class="task-item-title">{{ task.title }}</div>
+        <div class="task-item-content">{{ task.description }}</div>
+        <div class="date">Date: {{ task.date }}</div>
+        <div class="priority-high">Priority : {{ task.priority }}</div>
     </mat-card-content>
     <div class="task-item-actions">
         <a mat-button>

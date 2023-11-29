@@ -1,8 +1,7 @@
 <div class="task-list">
     <div class="tasks-in-progress" >
         <h3>Tasks In Progress</h3>
-        <app-task-item ></app-task-item>
-        {{tasksList | json}}
+        <app-task-item *ngFor="let task of tasksList" [task]="task"></app-task-item>
     </div>
 
     <div class="tasks-completed" >

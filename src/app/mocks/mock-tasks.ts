@@ -1,4 +1,6 @@
-export const TASKS = [
+import { Task } from "../core/models/task";
+
+export const TASKS:Task [] = [
     {
         "id": 1,
         "title": "Project Setup and Architecture Planning",
