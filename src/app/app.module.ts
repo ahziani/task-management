@@ -24,6 +24,7 @@ import { ToolbarComponent } from './layout/toolbar/toolbar.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MatIconModule } from "@angular/material/icon";
 import { HttpClientModule } from '@angular/common/http';
+import { TruncatePipe } from './shared/pipes/truncate.pipe';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     TaskItemComponent,
     TaskFormComponent,
     LayoutComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,

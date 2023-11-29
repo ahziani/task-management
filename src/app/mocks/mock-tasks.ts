@@ -15,7 +15,7 @@ export const TASKS:Task [] = [
         "title": "Implement Angular Material UI",
         "description": "Integrate Angular Material and customize themes to match the company branding. Ensure responsiveness and accessibility standards are met.",
         "date": "2023-12-15T00:00:00.000Z",
-        "priority": "medium",
+        "priority": "low",
         "completed": true,
         "log": 3
     },

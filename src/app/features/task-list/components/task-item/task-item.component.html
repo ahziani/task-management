@@ -1,9 +1,15 @@
 <mat-card class="task-item">
     <mat-card-content>
         <div class="task-item-title">{{ task.title }}</div>
-        <div class="task-item-content">{{ task.description }}</div>
-        <div class="date">Date: {{ task.date }}</div>
-        <div class="priority-high">Priority : {{ task.priority }}</div>
+        <div class="task-item-content">{{ task.description | truncate:80 }}</div>
+        <div class="date">Date: {{ task.date | date }}</div>
+        <div [ngClass]="{
+                'priority-high' : task.priority === 'high',
+                'priority-medium': task.priority === 'medium',
+                'priority-low': task.priority === 'low'
+        }">
+            Priority : {{ task.priority }}
+        </div>
     </mat-card-content>
     <div class="task-item-actions">
         <a mat-button [routerLink]="['/edit', task.id]">
