@@ -22,10 +22,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { LayoutComponent } from './layout/layout.component';
 import { ToolbarComponent } from './layout/toolbar/toolbar.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import { ReplaceCommaDirective } from './shared/directives/replace-comma.directive';
 import { MatIconModule } from "@angular/material/icon";
 import { HttpClientModule } from '@angular/common/http';
-import { TruncatePipe } from './shared/pipes/truncate.pipe';
 
 @NgModule({
   declarations: [
@@ -35,9 +33,7 @@ import { TruncatePipe } from './shared/pipes/truncate.pipe';
     TaskItemComponent,
     TaskFormComponent,
     LayoutComponent,
-    ToolbarComponent,
-    ReplaceCommaDirective,
-    TruncatePipe
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,

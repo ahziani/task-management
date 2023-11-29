@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
+import { TaskService } from 'src/app/core/services/task.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import { AuthService } from 'src/app/core/services/auth.service';
 })
 export class LoginComponent {
   loginForm: FormGroup;
-  constructor(private fb: FormBuilder, private auth:AuthService, private router:Router) {
+  constructor(private fb: FormBuilder, private auth:AuthService, private router:Router, private task: TaskService) {
     this.loginForm = this.fb.group({
       usernameLogin: ['', Validators.required],
       passwordLogin: ['', Validators.required]
