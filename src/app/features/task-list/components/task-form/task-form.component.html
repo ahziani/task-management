@@ -1,3 +1,47 @@
 <div class="task-form">
-    Editor
+    <mat-card>
+        <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+            <mat-card-title>Add a new task</mat-card-title>
+            <mat-form-field appearance="fill">
+                <mat-label>Title</mat-label>
+                <input matInput formControlName="title">
+                <mat-error>
+                    Titre is required
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Description</mat-label>
+                <textarea matInput formControlName="description"></textarea>
+                <mat-error>
+                    Description is required
+                </mat-error>
+            </mat-form-field>
+            
+            <mat-form-field appearance="fill">
+                <mat-label>Time spent</mat-label>
+                <input matInput formControlName="log">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Deadline</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="deadline">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Priority</mat-label>
+                <mat-select formControlName="priority">
+                  <mat-option value="hight">hight</mat-option>
+                  <mat-option value="medium">medium</mat-option>
+                  <mat-option value="low">low</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <div class="mb-20">
+                <mat-slide-toggle formControlName="complated">Task in progress</mat-slide-toggle>
+            </div>
+            <button mat-raised-button color="primary" type="submit" [disabled]="!taskForm.valid">Save task</button>
+        </form>
+    </mat-card>
 </div>

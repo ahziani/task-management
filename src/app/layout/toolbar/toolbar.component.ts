@@ -8,4 +8,8 @@ import { AuthService } from 'src/app/core/services/auth.service';
 })
 export class ToolbarComponent {
   constructor(private auth: AuthService) {}
+
+  logout(){
+    this.auth.logout();
+  }
 }
